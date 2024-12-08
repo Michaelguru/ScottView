@@ -1,0 +1,765 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(14, 11, 44);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.section{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.section.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.header{
+    width: 100%;
+    background-color: rgb(11, 8, 37);
+    padding: 20px;
+    position: fixed;
+    z-index: 1;
+}
+.header img{
+    height: 40px;
+    cursor: pointer;
+    display: none;
+}
+.header a{
+    color: white;
+    text-decoration: none;
+}
+#logo{
+    margin-right: 55%;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+    transition: .3s;
+}
+#logo:hover{
+    color: rgb(143, 143, 143);
+}
+.upper-links{
+    margin-right: 20px;
+    font-weight: bolder;
+    transition: .3s;
+}
+.upper-links:hover{
+    color: rgb(143, 143, 143);
+}
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 100px;
+    height: 70vh;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.container-text{
+    margin-top: 60px;
+}
+.container-text h1{
+    font-size: 40px;
+    color: white;
+    margin-bottom: 10px;
+}
+.container-text h3{
+    color: rgb(143, 143, 143);
+    margin-bottom: 5px;
+}
+.container-text p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+.container-text a{
+    margin-right: 5px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background-color: rgb(47, 47, 255);
+    border-radius: 7px;
+    transition: .3s;
+    margin-bottom: 20px;
+}
+.container-text a:hover{
+    background-color: rgb(13, 13, 245);
+}
+#resume{
+    background-color: transparent;
+    border: 2px solid white;
+}
+#resume:hover{
+    background-color: rgba(255, 255, 255, 0.212);
+}
+.container-image{
+    margin-top: 20px;
+    height: 350px;
+    width: 600px;
+}
+.container-image img{
+    height: 100%;
+}
+#about-section{
+    background-color: rgb(41, 38, 71);
+    height: 90vh;
+    padding: 20px;
+}
+#about-section h2{
+    font-size: 30px;
+    color: white;
+    margin-top: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 20px;
+}
+.about-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+.about-text{
+    max-width: 600px;
+}
+.about-text h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+.about-text p{
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}
+.about-images{
+    width: 650px;
+    text-align: center;
+}
+#firstImg{
+    background-color: rgb(65, 63, 94);
+    width: 600px;
+    height: 200px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    
+}
+#firstImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.secondImg{
+    height: 200px;
+    width: 300px;
+    background-color: rgb(65, 63, 94);
+    border-radius: 10px;
+}
+#project-section{
+    height: 140vh;
+    padding: 20px;
+}
+#project-section h2{
+    font-size: 30px;
+    color: white;
+    margin-top: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 20px;
+}
+.project-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+.project-container{
+    text-align: center;
+    width: 600px;
+    height: 350px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    background-color: rgb(65, 63, 94);
+    padding: 10px;
+    border-radius: 10px;
+}
+.project-container h5{
+    /* text-align: left; */
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.project-container p{
+    text-align: left;
+    color: white;
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 20px;
+}
+.project-container img{
+    height: 60%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.project-container a{
+    padding: 10px 20px;
+    background-color: rgb(47, 47, 255);
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+    transition: .3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.315);
+}
+.project-container a:hover{
+    background-color: rgb(13, 13, 245);
+}
+
+#thin-line{
+    height: 2px;
+    background-color: rgb(65, 63, 94);
+}
+#skills-section{
+    height: 90vh;
+    padding: 20px;
+}
+#skills-section h2{
+    font-size: 30px;
+    color: white;
+    margin-top: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.skills-wrapper h3{
+    color: rgb(143, 143, 143);
+    margin-bottom: 20px;
+}
+.skills{
+    text-align: center;
+}
+
+.skills-wrapper ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.skills-wrapper li{
+    position: relative;
+    border-radius: 50px;
+    width: 600px;
+    font-size: 18px;
+    color: white;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    padding: 15px 20px;
+    transition: .5s;
+    background-color: rgb(128, 1, 247);
+}
+.skills-wrapper p{
+    text-align: left;
+    color: white;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 30px;
+}
+.skills-wrapper a{
+    position: relative;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 3px solid rgb(143, 143, 143);
+    border-radius: 30px;
+    color: white;
+    transition: .3s;
+}
+.skills-wrapper a:hover::after{
+    content: attr(data-title);
+    position: absolute;
+    bottom: -1.5em;
+    left: 100%;
+    transform: translateX(-50%);
+    background: white;
+    color: black;
+    padding: 0.5em;
+    border-radius: 20px;
+    font-size: 12px;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0,0,0, 0.2);
+    z-index: 10;
+}
+
+.skills-wrapper a:hover{
+    background-color: rgb(149, 35, 255);
+    border: none;
+}
+
+#testimonial-section{
+    height: 90vh;
+    padding: 20px;
+    background-color: white;
+}
+#testimonial-section h2{
+    font-size: 30px;
+    color: rgb(11, 8, 37);
+    margin-top: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 20px;
+}
+.testimonal-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.testimonal-container{
+    margin-bottom: 40px;
+    margin-top: 20px;
+    width: 600px;
+}
+.testimonal-container h3{
+    margin-bottom: 20px;
+    color: rgb(11, 8, 37);
+}
+.testimonal-container img{
+    height: 50px;
+    border: 3px solid rgb(11, 8, 37);
+    border-radius: 70px;
+    margin-bottom: 20px;
+}
+.testimonal-container h5{
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: rgb(41, 38, 71);
+}
+.testimonal-container p{
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(11, 8, 37);
+}
+#contact{
+    height: 100vh;
+    padding: 20px;
+}
+#contact h2{
+    font-size: 30px;
+    color: white;
+    margin-top: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 20px;
+}
+.contact-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.whatsappContact, .otherLinks{
+    width: 600px;
+    margin-bottom: 50px;
+}
+.whatsappContact p{
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+.whatsappContact a{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(1, 148, 1);
+    padding: 15px 30px;
+    border-radius: 10px;
+    transition: .3s;
+}
+.whatsappContact a:hover{
+    background-color: rgb(2, 105, 2);
+}
+.otherLinks a{
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    margin-right: 50%;
+    font-weight: bold;
+}
+#gmail{
+    background: linear-gradient(to right, red, green);
+}
+#Github{
+    background-color: black;
+    border: 2px solid white;
+
+}
+#X{
+    background-color: black;
+    border: 2px solid white;
+}
+#Instagram{
+    background: linear-gradient(to right, yellow, red, purple);
+}
+#Linkedin{
+    background-color: rgb(0, 81, 255);
+}
+#Behance{
+    background-color: black;
+    border: 2px solid white;
+}
+footer{
+    background-color: rgb(5, 3, 22);
+    height: 50vh;
+    padding: 20px;
+}
+.footer p{
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+.footer a{
+    display: block;
+    margin-bottom: 25px;
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+.footer a:hover{
+    color: grey;
+}
+.icon{
+    text-align: center;
+}
+.icon img{
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.icon p{
+    color: grey;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:770px){
+    .header{
+        width: 100%;
+        background-color: rgb(11, 8, 37);
+        padding: 15px;
+        position: fixed;
+        z-index: 1;
+    }
+    .header img{
+        height: 30px;
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        right: 50px;
+        top: 10px;
+    }
+    .header a{
+        color: white;
+        text-decoration: none;
+    }
+    #logo{
+        margin-right: 55%;
+        font-size: 25px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 900;
+        transition: .3s;
+    }
+    #logo:hover{
+        color: rgb(143, 143, 143);
+    }
+    .upper-links{
+        display: none;
+        margin-right: 20px;
+        margin-top: 10px ;
+        margin-bottom: 10px;
+        font-weight: bolder;
+        transition: .3s;
+    }
+    #cancel{
+        height: 35px;
+        display: none;
+    }
+    .wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 100px;
+        height: 90vh;
+        justify-content: space-between;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .container-text{
+        margin-top: 60px;
+    }
+    .container-text h1{
+        font-size: 35px;
+        color: white;
+        margin-bottom: 10px;
+    }
+    .container-text h3{
+        font-size: 18px;
+        color: rgb(143, 143, 143);
+        margin-bottom: 5px;
+    }
+    .container-text p{
+        color: white;
+        margin-right: 70px;
+        font-size: 15px;
+        margin-bottom: 40px;
+    }
+    .container-text a{
+        font-size: 13px;
+        margin-right: 5px;
+        text-decoration: none;
+        color: white;
+        padding: 8px 14px;
+        background-color: rgb(47, 47, 255);
+        border-radius: 7px;
+        transition: .3s;
+        margin-bottom: 20px;
+    }
+    .container-text a:hover{
+        background-color: rgb(13, 13, 245);
+    }
+    #resume{
+        background-color: transparent;
+        border: 2px solid white;
+    }
+    #resume:hover{
+        background-color: rgba(255, 255, 255, 0.212);
+    }
+    .container-image{
+        text-align: center;
+        margin-top: 20px;
+        height: 350px;
+        width: 600px;
+    }
+    .container-image img{
+        height: 100%;
+    }
+    #about-section{
+        background-color: rgb(41, 38, 71);
+        height: 150vh;
+        padding: 20px;
+    }
+
+    .about-images{
+        width: 100%;
+        text-align: center;
+    }
+    #firstImg{
+        background-color: rgb(65, 63, 94);
+        width: 100%;
+        height: 180px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        border-radius: 0px;
+        
+    }
+    #firstImg img{
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+    .secondImg{
+        height: 180px;
+        width: 230px;
+        background-color: rgb(65, 63, 94);
+        border-radius: 0px;
+    }
+
+    #project-section{
+        height: 160vh;
+        padding: 20px;
+    }
+    #project-section h2{
+        font-size: 30px;
+        color: white;
+        margin-top: 30px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-bottom: 20px;
+    }
+    .project-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+    .project-container{
+        text-align: center;
+        width: 400px;
+        height: 250px;
+        margin-right: 10px;
+        margin-bottom: 30px;
+        background-color: rgb(65, 63, 94);
+        padding: 10px;
+        border-radius: 0px;
+    }
+    .project-container h5{
+        /* text-align: left; */
+        font-size: 16px;
+        color: white;
+        margin-bottom: 10px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .project-container p{
+        text-align: left;
+        color: white;
+        font-size: 14px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-bottom: 20px;
+    }
+    .project-container img{
+        height: 50%;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .project-container a{
+        font-size: 14px;
+        padding: 7px 14px;
+        background-color: rgb(47, 47, 255);
+        text-decoration: none;
+        color: white;
+        border-radius: 20px;
+        transition: .3s;
+        
+    }
+    .project-container a:hover{
+        background-color: rgb(13, 13, 245);
+    }
+    #skills-section{
+        height: 100vh;
+        padding: 20px;
+    }
+    .skills-wrapper li{
+        width: 90%;
+        font-size: 18px;
+        color: white;
+        padding-bottom: 20px;
+        margin-right: 5px;
+        background-color: rgb(128, 1, 247);
+    }
+    
+}
+
+
+
+
+
+@media(max-width: 450px){
+    .container-text a{
+        font-size: 12px;
+        margin-right: 3px;
+        text-decoration: none;
+        color: white;
+        padding: 8px 12px;
+        background-color: rgb(47, 47, 255);
+        border-radius: 7px;
+        transition: .3s;
+        margin-bottom: 20px;
+    }
+
+    #about-section{
+        background-color: rgb(41, 38, 71);
+        height: 120vh;
+        padding: 20px;
+    }
+    .about-text p{
+        margin-bottom: 10px;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 14px;
+    }
+
+    .about-images{
+        width: 100%;
+        text-align: center;
+    }
+    #firstImg{
+        background-color: rgb(65, 63, 94);
+        width: 100%;
+        height: 180px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        border-radius: 0px;
+        
+    }
+    #firstImg img{
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+    .secondImg{
+        height: 110px;
+        width: 47%;
+        background-color: rgb(65, 63, 94);
+        border-radius: 0px;
+    }
+
+    #project-section{
+        height: 150vh;
+        padding: 20px;
+    }
+    .project-container p{
+        text-align: left;
+        color: white;
+        font-size: 14px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-bottom: 10px;
+    }
+    .project-container img{
+        height: 50%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    .skills-wrapper li{
+        width: 90%;
+        font-size: 18px;
+        color: white;
+        padding-bottom: 20px;
+        margin-right: 5px;
+        background-color: rgb(128, 1, 247);
+    }
+
+    #testimonial-section{
+        height: 80vh;
+        padding: 20px;
+        background-color: white;
+    }
+    .otherLinks a{
+        display: block;
+        margin-bottom: 10px;
+        padding: 15px 30px;
+        color: white;
+        text-decoration: none;
+        margin-right: 40%;
+        font-weight: bold;
+    }
+    
+}
