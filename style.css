@@ -5,7 +5,7 @@ html{
     margin: 0;
     padding: 0;
 }
-button {
+#theme-toggle {
     padding: 0.5rem 1rem;
     cursor: pointer;
     border: none;
@@ -77,10 +77,13 @@ button {
 #logo:hover{
     color: rgb(143, 143, 143);
 }
+
+
 .upper-links{
     margin-right: 20px;
     font-weight: bolder;
     transition: .3s;
+
 }
 .upper-links:hover{
     color: rgb(143, 143, 143);
@@ -102,10 +105,14 @@ button {
     
     margin-bottom: 10px;
 }
-.container-text h3{
+
+.container-text h2{
     color: rgb(143, 143, 143);
     margin-bottom: 5px;
+    display: inline-block;
 }
+
+
 .container-text p{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 16px;
@@ -120,9 +127,11 @@ button {
     border-radius: 7px;
     transition: .3s;
     margin-bottom: 20px;
+    
 }
 .container-text a:hover{
     background-color: rgb(13, 13, 245);
+    
 }
 #resume{
     background-color: transparent;
@@ -136,9 +145,14 @@ button {
     margin-top: 20px;
     height: 350px;
     width: 600px;
+    cursor: pointer;
 }
 .container-image img{
     height: 100%;
+    transition: .4s ease;
+}
+.container-image img:hover{
+    padding-left: 40px;
 }
 #about-section{
     background-color: rgb(41, 38, 71);
@@ -218,6 +232,7 @@ button {
     background-color: rgb(65, 63, 94);
     padding: 10px;
     border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.411);
 }
 .project-container h5{
     /* text-align: left; */
@@ -417,6 +432,10 @@ button {
     text-decoration: none;
     margin-right: 50%;
     font-weight: bold;
+    transition: .4s ease;
+}
+.otherLinks a:hover{
+    margin-left: 30px;
 }
 #gmail{
     background: linear-gradient(to right, red, green);
@@ -488,7 +507,7 @@ footer{
 
 
 
-@media(max-width:770px){
+@media(max-width: 850px){
     .header{
         width: 100%;
         background-color: rgb(11, 8, 37);
@@ -525,6 +544,11 @@ footer{
         margin-bottom: 10px;
         font-weight: bolder;
         transition: .3s;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    #theme-toggle{
+        margin-left: 37%;
     }
     #cancel{
         height: 35px;

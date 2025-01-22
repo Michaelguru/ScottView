@@ -79,3 +79,53 @@ themeToggle.addEventListener('click', () => {
     
   }
 });
+
+const texts = ["- A Front-End Developer", "- A Graphics-Designer", "- A Web-Designer"];
+let index = 0;
+
+function typeEffect() {
+    const element = document.getElementById("animatedText");
+    const currentText = texts[index];
+    let charIndex = 0;
+
+    const typingInterval = setInterval(() => {
+        element.textContent = currentText.substring(0, charIndex++);
+        if (charIndex > currentText.length){
+            clearInterval(typingInterval);
+            setTimeout(clearEffect, 2000);
+        }
+    }, 100);
+
+    function clearEffect(){
+        const clearingInterval = setInterval(() => {
+            element.textContent = currentText.substring(0, charIndex--);
+            if (charIndex < 0) {
+                clearInterval(clearingInterval);
+                index = (index + 1) % texts.length;
+                setTimeout(typeEffect, 1000);
+            }
+        }, 50)
+    }
+}
+
+typeEffect();
+
+let slideIndex = 0;
+showSlides(slideIndex);
+
+function changeSlide(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  let slides = document.querySelectorAll(".slide");
+  if (n >= slides.length) { slideIndex = 0 }
+  if (n < 0) { slideIndex = slides.length - 1 }
+  slides.forEach((slide) => (slide.style.display = "none"));
+  slides[slideIndex].style.display = "block";
+}
+
+// Optional: Auto-change slides
+setInterval(() => {
+  changeSlide(1);
+}, 6500);
