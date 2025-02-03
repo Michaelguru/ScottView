@@ -216,6 +216,7 @@ html{
     margin-bottom: 20px;
 }
 #project-section button{
+    color: black;
     padding: 10px 15px;
     margin-bottom: 10px;
     border-radius: 10px;
