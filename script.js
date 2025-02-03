@@ -129,3 +129,12 @@ function showSlides(n) {
 setInterval(() => {
   changeSlide(1);
 }, 6500);
+
+function changeGraphics(){
+    document.getElementById("web-development-card").style.display = 'none';
+    document.getElementById("graphics-cards").style.display = 'flex';
+}
+function changeProject(){
+    document.getElementById("web-development-card").style.display = 'flex';
+    document.getElementById("graphics-cards").style.display = 'none';
+}

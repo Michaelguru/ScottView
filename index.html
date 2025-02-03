@@ -31,7 +31,7 @@
         <h2 id="animatedText">- A </h2>
         </div>
 
-        <p>Building seamless website experiences and project for businesses, companies, and individuals.</p>
+        <p>Building seamless website experiences and graphics design project for businesses, companies, and individuals.</p>
         <a href="#project-section">Projects</a>
         <a id="resume" href="images/portfolio.pdf" download="PDF"> Download Resume</a>
         <a href="#contact">Contact Me</a>
@@ -74,7 +74,10 @@
 
 <section id="project-section" class="section">
     <h2>Projects</h2>
-    <div class="project-wrapper">
+    <button onclick="changeProject()">Web-developent</button>
+    <button onclick="changeGraphics()">Graphics Design</button>
+
+    <div class="project-wrapper" id="web-development-card">
         <div class="project-container">
             <h5>Wrapstar Shawarma</h5>
             <img src="images/windows screenshot img5.png" alt="website's home photo">
@@ -101,6 +104,108 @@
             </div>
         </div>
     </div>
+
+
+    <div class="project-wrapper section" id="graphics-cards" style="display: none;">
+        <div class="project-container">
+            <h5>Wrapstar Shawarma</h5>
+            <img src="images/star burger.png" alt="website's home photo">
+            <div class="background">
+                <p>designed an E-flyer showcasing their new menu for shawarma  restaurant at Kwara State University, Ilorin.</p>
+                <p><b>Design Software:</b> Photoshop</p>
+            </div>
+        </div>
+        <div class="project-container">
+            <h5>Cybernated technology</h5>
+            <img src="images/Cybernated technology.jpg" alt="website's home photo">
+            <div class="background">
+                <p> I designed a logo for a technology company</p>
+                <p><b>Design Software:</b> Photoshop</p>
+               
+            </div>
+        </div>
+        <div class="project-container">
+            <h5>Wrapstar Shawarma</h5>
+            
+            <img src="images/PAY 4 ME.jpg" alt="website's home photo">
+            <div class="background">
+                <p>Designed an outstanding social media Ad flyer for wrapstar, announcing their newly added features on their website.</p>
+                <p><b>Design Software:</b> Photoshop & CorelDraw</p>
+            </div>
+        </div>
+
+        <div class="project-container">
+            <h5>Bashaya Motors</h5>
+            
+            <img src="images/Bashaya Motors Logo png.png" alt="website's home photo">
+            <div class="background">
+                <p>A logo design for a car dealing company</p>
+                <p><b>Design Software:</b> Adobe Illustrator</p>
+
+                
+            </div>
+        </div>
+
+        <div class="project-container">
+            <h5>Wrapstar Shawarma</h5>
+            
+            <img src="images/I AM SINGLE.jpg" alt="website's home photo">
+            <div class="background">
+                <p>Designed a stunning Valentine flyer for Wrapstar, showing the different packages and prices, with a simple CTA link for ordering</p>
+                <p><b>Design Software:</b> Photoshop</p>
+            </div>
+        </div>
+
+        <div class="project-container">
+            <h5>Wrapstar Shawarma</h5>
+            
+            <img src="images/MY LOVE & I.jpg" alt="website's home photo">
+            <div class="background">
+                <p>Designed a stunning Valentine flyer for Wrapstar, showing the different packages and prices, with a simple CTA link for ordering</p>
+                <p><b>Design Software:</b> Adobe Photoshop</p>
+            </div>
+        </div>
+
+        <div class="project-container">
+            <h5>ScottView Graphics</h5>
+            
+            <img src="images/june 2024.jpg" alt="website's home photo">
+            <div class="background">
+                <p>An E-flyer design for ScottView Graphics, welcoming their beloved customers to the month os June.</p>
+                <p><b>Design Software:</b> CorelDraw</p>
+            </div>
+        </div>
+
+        <div class="project-container">
+            <h5>ScottView Graphics</h5>
+            
+            <img src="images/August.jpg" alt="website's home photo">
+            <div class="background">
+                <p>An E-flyer design for ScottView Graphics, welcoming their beloved customers to the month os August.</p>
+                <p><b>Design Software:</b> Photoshop</p>
+            </div>
+        </div>
+
+        <div class="project-container">
+            <h5>ScottView Dev</h5>
+            
+            <img src="images/DEVELOPMENT FLYER.jpg" alt="website's home photo">
+            <div class="background">
+                <p>An outstanding social media Ad flyer that calls the attention of viewers to the development of their brand websites, and showcasing the services they render </p>
+                <p><b>Design Software:</b>Adobe Photoshop</p>
+            </div>
+        </div>
+
+        <div class="project-container">
+            <h5>Wrapstar Shawarma</h5>
+            
+            <img src="images/wrapstar menu 2.jpg" alt="website's home photo">
+            <div class="background">
+                <p>A well detailed menu design made for wrapstar shawarma announcing their latest food menu.</p>
+                <p><b>Design Software:</b> Adobe Photoshop</p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <div id="thin-line"></div>
@@ -110,11 +215,23 @@
     <div class="skills-wrapper">
         <div class="skills-container">
             <h3>Programming Languages, FrameWorks & Tools:</h3>
-            <ul>
-                <li><div></div>HTML:5</li>
-                <li><div></div>CSS:3</li>
-                <li><div></div>JavaScript</li>
-                <li><div></div>React.js</li>
+            <ul class="ul">
+                <div><li  id="html">HTML 5: 90%</li></div>
+                <div><li  id="css">CSS 3: 80%</li></div>
+                <div><li  id="javascript">Javascript: 50%</li></div>
+                <div><li  id="react">ReactJs: 50%</li></div>
+                
+            </ul>
+            <h3>Graphics Design Tools and Softwares:</h3>
+            <ul class="ul">
+                
+                <div><li id="coreldraw">CorelDraw: 95%</li></div>
+                
+                <div><li id="photoshop">Photoshop: 85%</li></div>
+                
+                <div><li id="figma">Figma: 70%</li></div>
+    
+                <div><li id="adobe-illustrator">Adobe Illustrator: 35%</li></div>
             </ul>
         </div>
 
@@ -127,9 +244,7 @@
 </section>
 
 
-<section>
-    
-</section>
+
 
 <div id="thin-line"></div>
 

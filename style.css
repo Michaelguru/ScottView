@@ -92,7 +92,6 @@ html{
     display: flex;
     flex-wrap: wrap;
     padding-top: 100px;
-    height: 70vh;
     justify-content: space-between;
     margin-left: 20px;
     margin-right: 20px;
@@ -156,7 +155,6 @@ html{
 }
 #about-section{
     background-color: rgb(41, 38, 71);
-    height: 90vh;
     padding: 20px;
 }
 #about-section h2{
@@ -209,7 +207,6 @@ html{
     border-radius: 10px;
 }
 #project-section{
-    height: 140vh;
     padding: 20px;
 }
 #project-section h2{
@@ -217,6 +214,20 @@ html{
     margin-top: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-bottom: 20px;
+}
+#project-section button{
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: .4s;
+}
+#project-section button:hover{
+    background-color: rgb(149, 35, 255);
+}
+#project-section button:visited{
+    background-color: rgb(170, 79, 255);
 }
 .project-wrapper{
     display: flex;
@@ -226,6 +237,17 @@ html{
     text-align: center;
     width: 600px;
     height: 350px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    background-color: rgb(65, 63, 94);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.411);
+}
+#graphics-cards .project-container{
+    text-align: center;
+    width: 500px;
+    height: 450px;
     margin-right: 10px;
     margin-bottom: 30px;
     background-color: rgb(65, 63, 94);
@@ -243,7 +265,7 @@ html{
 .project-container p{
     text-align: left;
     color: white;
-    font-size: 14px;
+    font-size: 16px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-bottom: 20px;
 }
@@ -271,7 +293,7 @@ html{
     background-color: rgb(65, 63, 94);
 }
 #skills-section{
-    height: 90vh;
+    
     padding: 20px;
 }
 #skills-section h2{
@@ -296,18 +318,111 @@ html{
     flex-wrap: wrap;
     text-align: center;
 }
+.ul  div{
+    text-align: center;
+    margin-right: 10px;
+    display: flex;
+    background-color: rgb(143, 143, 143);
+    padding: 5px;
+    border-radius: 50px;
+    width: 45%;
+    margin-bottom: 10px;
+}
 .skills-wrapper li{
+    
     position: relative;
     border-radius: 50px;
     width: 600px;
-    font-size: 18px;
+    font-size: 16px;
     color: white;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     margin-right: 5px;
     padding: 15px 20px;
     transition: .5s;
     background-color: rgb(128, 1, 247);
 }
+#html{
+    animation: html 3s infinite;
+}
+#css{
+    animation: css 3s infinite;
+}
+#javascript{
+    animation: javascript 3s infinite;
+}
+#react{
+    animation: javascript 3s infinite;
+}
+#coreldraw{
+    animation: coreldraw 3s infinite;
+}
+#photoshop{
+    animation: photoshop 3s infinite;
+}
+#figma{
+    animation: figma 3s infinite;
+}
+#adobe-illustrator{
+    animation: illustrator 3s infinite;
+}
+@keyframes html {
+    0%{
+        width: 25%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+@keyframes css {
+    0%{
+        width: 25%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+@keyframes javascript {
+    0%{
+        width: 25%;
+    }
+    100%{
+        width: 50%;
+    }
+}
+@keyframes coreldraw {
+    0%{
+        width: 25%;
+    }
+    100%{
+        width: 85%;
+    }
+}
+@keyframes photoshop {
+    0%{
+        width: 25%;
+    }
+    100%{
+        width: 75%;
+    }
+}
+@keyframes figma {
+    0%{
+        width: 25%;
+    }
+    100%{
+        width: 65%;
+    }
+}
+@keyframes illustrator {
+    0%{
+        width: 25%;
+    }
+    100%{
+        width: 40%;
+    }
+}
+
+
 .skills-wrapper p{
     text-align: left;
     font-size: 16px;
@@ -613,7 +728,6 @@ footer{
     }
     #about-section{
         background-color: rgb(41, 38, 71);
-        height: 150vh;
         padding: 20px;
     }
 
@@ -643,7 +757,6 @@ footer{
     }
 
     #project-section{
-        height: 160vh;
         padding: 20px;
     }
     #project-section h2{
@@ -667,6 +780,21 @@ footer{
         background-color: rgb(65, 63, 94);
         padding: 10px;
         border-radius: 0px;
+    }
+    #graphics-cards .project-container{
+        text-align: center;
+        width: 300px;
+        height: 350px;
+        margin-right: 10px;
+        margin-bottom: 30px;
+        background-color: rgb(65, 63, 94);
+        padding: 10px;
+        border-radius: 0px;
+    }
+    #graphics-cards .project-container img{
+        height: 60%;
+        border-radius: 10px;
+        margin-bottom: 20px;
     }
     .project-container h5{
         /* text-align: left; */
@@ -702,12 +830,21 @@ footer{
         background-color: rgb(13, 13, 245);
     }
     #skills-section{
-        height: 100vh;
         padding: 20px;
+    }
+    .ul  div{
+        text-align: center;
+        margin-right: 0px;
+        display: flex;
+        background-color: rgb(143, 143, 143);
+        padding: 5px;
+        border-radius: 50px;
+        width: 100%;
+        margin-bottom: 10px;
     }
     .skills-wrapper li{
         width: 90%;
-        font-size: 18px;
+        font-size: 16px;
         color: white;
         padding-bottom: 20px;
         margin-right: 5px;
@@ -735,7 +872,6 @@ footer{
 
     #about-section{
         background-color: rgb(41, 38, 71);
-        height: 120vh;
         padding: 20px;
     }
     .about-text p{
@@ -771,7 +907,6 @@ footer{
     }
 
     #project-section{
-        height: 150vh;
         padding: 20px;
     }
     .project-container p{
@@ -786,17 +921,27 @@ footer{
         border-radius: 5px;
         margin-bottom: 10px;
     }
+    .ul  div{
+        text-align: center;
+        margin-right: 0px;
+        display: flex;
+        background-color: rgb(143, 143, 143);
+        padding: 5px;
+        border-radius: 50px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
     .skills-wrapper li{
         width: 90%;
-        font-size: 18px;
+        font-size: 13px;
         color: white;
-        padding-bottom: 20px;
+        padding: 10px 5px;
         margin-right: 5px;
         background-color: rgb(128, 1, 247);
     }
 
     #testimonial-section{
-        height: 80vh;
         padding: 20px;
         background-color: white;
     }
