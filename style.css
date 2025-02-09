@@ -216,7 +216,6 @@ html{
     margin-bottom: 20px;
 }
 #project-section button{
-    color: black;
     padding: 10px 15px;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -329,6 +328,7 @@ html{
     width: 45%;
     margin-bottom: 10px;
 }
+
 .skills-wrapper li{
     
     position: relative;
@@ -423,6 +423,23 @@ html{
     }
 }
 
+.soft-skill-wrapper{
+    margin-top: 40px;
+    justify-content: space-around;
+    text-align: center;
+    display: grid;
+    grid: auto auto/ auto auto;
+}
+.soft-skill .fa-solid{
+    color: grey;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.soft-skill h4{
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
 .skills-wrapper p{
     text-align: left;
@@ -850,6 +867,16 @@ footer{
         padding-bottom: 20px;
         margin-right: 5px;
         background-color: rgb(128, 1, 247);
+    }
+    .soft-skill .fa-solid{
+        color: grey;
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    .soft-skill h4{
+        margin-bottom: 30px;
+        font-size: 20px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
     
 }
