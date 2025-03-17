@@ -110,6 +110,9 @@ function typeEffect() {
 
 typeEffect();
 
+
+
+
 let slideIndex = 0;
 showSlides(slideIndex);
 
