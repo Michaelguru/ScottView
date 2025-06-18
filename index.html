@@ -13,26 +13,23 @@
     
     <header class="header">
         
-        <div>
-        <a id="logo" href="index.html"> ScottViewDev</a>
-         </div>
-        <div>
-            <a class="upper-links" href="#home">Home</a>
-            <a class="upper-links" href="#project-section">Projects</a>
-            <a class="upper-links" href="#skills-section">Skills</a>
-            <a class="upper-links" href="#about-section">About</a>
-            <a class="upper-links" href="#contact">Contact</a>
-            <button id="theme-toggle">Change Theme </button>
-        </div>
+        <div class="logo">ScottViewDev</div>
 
-        <div class="spaces"></div>
-    
-        <div class="header-img-container">
-            <img src="images/menu.png" onclick="toggle()" id="show" alt="menuToggle">
-            <img src="images/cancel-menu.png" id="cancel" onclick="cancelToggle()" alt="cancel-menu">
-        </div>
+        <ul class="nav-list">
+            <li><a href="#home"> Home</a></li>
+            <li><a href="#about-section">About</a></li>
+            <li><a href="#project-section">Projects</a></li>
+            <li><a href="#skills-section">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button id="theme-toggle">Change Theme </button>
+        
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
         
     </header>
+
+    
 
 <div class="wrapper section" id="home" >
     <div class="container-text">
@@ -92,7 +89,7 @@
             <h5>Wrapstar Shawarma</h5>
             <img src="images/windows screenshot img5.png" alt="website's home photo">
             <div class="background">
-                <p>A dynamic website with exceptional UI and ordering features for a restaurant at Kwara State University, Ilorin.</p>
+                <p>A dynamic E-commerce website with exceptional UI and ordering features for a restaurant at Kwara State University, Ilorin.</p>
                 <a href="https://wrapstar.com.ng">Visit Website</a>
             </div>
         </div>
@@ -131,6 +128,16 @@
             <div class="background">
                 <p>A landing page for a technology sales company, showing the overview of their Sales. Not Deployed, tune in to see the development progess!! </p>
                 <a href="Website-Not-Published/">In Progress</a>
+            </div>
+        </div>
+
+        <div class="project-container">
+            <h5>Real Estate</h5>
+            
+            <img src="images/17.06.2025_17.49.04_REC.png" alt="website's home photo">
+            <div class="background">
+                <p>A website for a Real Estate company, showcasing their services, list of available houses for sales and rent, a contact and about us page. The website have help the business get lots of clients and collaborators </p>
+                <a href="https://michaelguru.github.io/Real-Etate/">In Progress</a>
             </div>
         </div>
     
@@ -237,6 +244,8 @@
             </div>
         </div>
 
+        
+
             <div class="see-more">
                 <a href="https://www.behance.net/otuoleolisem">See More Design Projects here</a>
             </div>
@@ -317,13 +326,20 @@
             
         </div>
 
-        <!-- <div class="testimonal-container">
+        <div class="testimonal-container">
             <h3>What Client Says*</h3>
-            <img src="images/empluxe logo.png" alt="image">
-            <h5>Empluxe Brand</h5>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut deserunt ipsam voluptatum error nihil officiis. Dicta voluptates laborum totam quo nulla porro ipsam vel perferendis error natus. Laudantium, assumenda enim!</p>
+            <img src="images/travelvisa logo.jpg" alt="image">
+            <h5>Travel Visa</h5>
+            <p>"Working with Michael was a fantastic experience. We needed a website that would reflect the beauty, excitement and professionalism of our travel service - and he absolutely delivered. From the clean design to the smooth user experience, every details was thoughtfully executed. Our customers love how easy it is to explore destinations and make enquiries. The site truly elevated our brand presence online, and we've seen a noticeable increase in engagement since launch. Highly recommended!"</p>
             
-        </div> -->
+        </div>
+
+        <div class="testimonal-container">
+            <img src="images/home.jpeg.png" alt="image">
+            <h5>Real Estate</h5>
+            <p>" We needed a website that was modern, fast and made it easy for clients to browse listings and reach out - and Michael delivered beyond our expectation. The design is clean and professional, and the property listing are easy to update. Our team has received great feedback from our clients who now find it easier to explore available properties for sales or for rent. Since launching the site, our online inquiries has incresed significantly. Highly impressed with the work!"</p>
+            
+        </div>
     </div>
 </section>
 

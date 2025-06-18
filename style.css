@@ -12,6 +12,7 @@ html{
     cursor: pointer;
     border: none;
     border-radius: 5px;
+    box-shadow: 1px 2px 15px black;
     background-color: var(--text-color);
     color: var(--bg-color);
     transition: background-color 0.3s, color 0.3s;
@@ -53,48 +54,47 @@ html{
     transform: translateY(0);
 }
 
-.header{
-    text-align: center;
+header{
+    z-index: 1000;
+    background-color: var(--bg-color);
+    padding: 20px;
     display: flex;
     justify-content: space-around;
-    background-color: rgb(11, 8, 37);
-    padding: 30px;
-    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid rgb(41, 38, 71);
     position: fixed;
-    z-index: 500;
-}
-.header-img-container{
-    display: none;
-}
-.header img{
-    cursor: pointer;
-    display: none;
-}
-.header a{
-    color: white;
-    text-decoration: none;
-}
-.spaces{
-    display: none;
-}
-#logo{
-    font-size: 25px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 900;
-    transition: .3s;
-}
-#logo:hover{
-    color: rgb(143, 143, 143);
-}
+    width: 100%;
 
-.upper-links{
-    margin-right: 20px;
-    font-weight: bolder;
-    transition: .3s;
-    align-content: center;
-}
-.upper-links:hover{
-    color: rgb(143, 143, 143);
+    .logo{
+        font-size: 25px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bold;
+    }
+
+    .nav-list{
+        list-style: none;
+        display: flex;
+        padding: 10px;
+
+        li{
+            padding-right: 15px;
+            color: white;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+            a{
+                text-decoration: none;
+                color: var(--text-color);
+                transition: .3s ease-in-out;
+            }
+            a:hover{
+                color: grey;
+            }
+        }
+    }
+
+    .hamburger{
+        display: none;
+    }
 }
 .wrapper{
     min-height: 100vh;
@@ -248,7 +248,7 @@ html{
 .project-container{
     text-align: center;
     width: 600px;
-    height: 350px;
+    height: 400px;
     margin-right: 10px;
     margin-bottom: 30px;
     background-color: rgb(65, 63, 94);
@@ -505,7 +505,6 @@ html{
 }
 
 #testimonial-section{
-    height: 90vh;
     padding: 20px;
     background-color: white;
 }
@@ -669,61 +668,38 @@ footer{
 
 
 @media(max-width: 850px){
-    .header{
-        width: 100%;
-        background-color: rgb(11, 8, 37);
-        padding: 15px;
-        position: fixed;
-        z-index: 1;
-    }
-    .header-img-container{
-        display: flex;
-    }
-    .spaces{
-        display: flex;
-    }
-    .header img{
-        height: 30px;
-        cursor: pointer;
-        display: block;
-        position: absolute;
-        right: 50px;
-        top: 10px;
-    }
-    .header a{
-        color: white;
-        text-decoration: none;
-    }
-    #logo{
-        margin-right: 55%;
-        font-size: 20px;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-weight: 900;
-        transition: .3s;
-    }
-    #logo:hover{
-        color: rgb(143, 143, 143);
+
+    header{
+
+        .nav-list{
+            padding: 50px 80px 50px 50px;
+            height: 100vh;
+            background-color: var(--bg-color);
+            flex-direction: column;
+            position: fixed;
+            z-index: 999;
+            top: 74.5px;
+            left: -300px;
+            border-right: 1px solid rgb(41, 38, 71);
+            transition: left .4s ease-in-out;
+
+            li{
+                line-height: 50px;
+            }
+        }
+
+        .hamburger{
+            display: flex;
+            font-size: 25px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
     }
 
-    .upper-links{
-        display: none;
-        margin-right: 100px;
-        margin-top: 45px ;
-        margin-bottom: 10px;
-        font-weight: bolder;
-        transition: .3s;
-        text-align: center;
-        margin-bottom: 30px;
+    .nav-list.visible{
+        left: 0px;
     }
-    #show{
-        margin-top: 10px;
-        height: 25px;
-    }
-    #cancel{
-        margin-top: 10px;
-        height: 25px;
-        display: none;
-    }
+    
     .wrapper{
         display: flex;
         flex-wrap: wrap;
@@ -807,7 +783,7 @@ footer{
     }
     .secondImg{
         height: 180px;
-        width: 230px;
+        width: 200px;
         background-color: rgb(65, 63, 94);
         border-radius: 0px;
     }
@@ -830,7 +806,7 @@ footer{
     .project-container{
         text-align: center;
         width: 400px;
-        height: 250px;
+        height: 300px;
         margin-right: 10px;
         margin-bottom: 30px;
         background-color: rgb(65, 63, 94);

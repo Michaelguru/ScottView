@@ -15,21 +15,9 @@ document.head.appendChild(scriptTag);
 
 
 
-function toggle(){
-    const elements = document.querySelectorAll(".upper-links")
-    elements.forEach(element => {
-        element.style.display = 'block';
-    });
-    document.getElementById("show").style.display = 'none';
-    document.getElementById("cancel").style.display = 'block';
-}
-function cancelToggle(){
-    const elements = document.querySelectorAll(".upper-links")
-    elements.forEach(element => {
-        element.style.display = 'none';
-    });
-    document.getElementById("show").style.display = 'block';
-    document.getElementById("cancel").style.display = 'none';
+function toggleMenu() {
+    const element = document.querySelector(".nav-list");
+    element.classList.toggle ('visible');
 }
 
 
@@ -72,10 +60,10 @@ themeToggle.addEventListener('click', () => {
   // Save the theme preference to localStorage
   if (document.body.classList.contains('dark-mode')) {
     localStorage.setItem('theme', 'dark');
-    themeToggle.textContent= "Light Mode";
+    themeToggle.textContent= "Light Mode🌞";
   } else {
     localStorage.setItem('theme', 'light');
-    themeToggle.textContent= "Dark Mode";
+    themeToggle.textContent= "Dark Mode🌙";
     
   }
 });
